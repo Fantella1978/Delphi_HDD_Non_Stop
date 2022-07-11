@@ -1,0 +1,211 @@
+object FormCD: TFormCD
+  Left = 223
+  Top = 193
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'HD NonStop 1.0'
+  ClientHeight = 158
+  ClientWidth = 472
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnHide = FormHide
+  PixelsPerInch = 96
+  TextHeight = 13
+  object CoolGroupBox1: TCoolGroupBox
+    Left = 0
+    Top = 0
+    Width = 281
+    Height = 121
+    ShadowColor = clWhite
+    Caption = 'Установки'
+    Color = clBtnFace
+    ParentColor = False
+    TabOrder = 0
+    object CoolLabel1: TCoolLabel
+      Left = 8
+      Top = 19
+      Width = 64
+      Height = 14
+      Caption = 'Устройство:'
+    end
+    object Bevel1: TBevel
+      Left = 8
+      Top = 91
+      Width = 265
+      Height = 20
+      Shape = bsTopLine
+    end
+    object CoolCheckRadioBox1: TCoolCheckRadioBox
+      Left = 8
+      Top = 97
+      Width = 193
+      Height = 17
+      Caption = 'Загружать при старте Windows'
+      UseDockManager = False
+      TabOrder = 0
+      TabStop = True
+    end
+    object RzDriveComboBox1: TRzDriveComboBox
+      Left = 80
+      Top = 16
+      Width = 193
+      Height = 21
+      TabOrder = 1
+      DriveTypes = [dtFixed]
+    end
+    object CoolCheckRadioBox2: TCoolCheckRadioBox
+      Left = 8
+      Top = 40
+      Width = 147
+      Height = 17
+      CheckRadioType = crRadioBox
+      Caption = 'Быстрый старт'
+      UseDockManager = False
+      TabOrder = 2
+      OnClick = CoolCheckRadioBox2Click
+    end
+    object CoolCheckRadioBox3: TCoolCheckRadioBox
+      Left = 8
+      Top = 56
+      Width = 147
+      Height = 17
+      CheckRadioType = crRadioBox
+      Caption = 'Минимум ресурсов'
+      UseDockManager = False
+      TabOrder = 3
+      OnClick = CoolCheckRadioBox3Click
+    end
+    object CoolCheckRadioBox4: TCoolCheckRadioBox
+      Left = 8
+      Top = 72
+      Width = 147
+      Height = 17
+      CheckRadioType = crRadioBox
+      Caption = 'Максимум ресурсов'
+      UseDockManager = False
+      TabOrder = 4
+      OnClick = CoolCheckRadioBox4Click
+    end
+  end
+  object Button1: TButton
+    Left = 121
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'Ок'
+    Default = True
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 201
+    Top = 128
+    Width = 75
+    Height = 25
+    Caption = 'Отмена'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object CoolTrayIcon1: TCoolTrayIcon
+    Icon.Data = {
+      0000010001001010100001000400280100001600000028000000100000002000
+      0000010004000000000000000000000000000000000010000000000000000000
+      0000C0C0C0008080800000FF000000FFFF00FFFF0000C0C0C000000000000000
+      0000000000000000000000000000000000000000000000000000000000006666
+      6222226666666662211133226666662111113344266662611111344552666216
+      1111345512662111611634511126211116202511112621111306011111262111
+      3520211111262113354116111126623354411161126662355441111612666625
+      4441111126666662244111222666666662222266666666666666666666660000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000000000}
+    Interval = 0
+    PopupMenu = PopupMenu1
+    ToolTip = 'HD NonStop'
+    Left = 312
+    Top = 40
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 344
+    Top = 40
+    object N3: TMenuItem
+      Bitmap.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000000000000000000000000000000000000FF00FF80FF00
+        FF00FF00FF80FF00FF00FF00FF0000000000FFFFFFBFFFFFFF0000000080FF00
+        FF00FF00FF000000FF00000080000000FF00FF00FF0000000000FF00FF3F7F7F
+        7F000000000000000000000000BFFFFFFF00FFFFFF0000000000FF00FF80FF00
+        FF00FF00FF000000FF00000080000000FF0000000000008080007F7F7F000000
+        0000FFFFFFBFFFFFFF00FFFFFFBFFFFFFF0000000080FF00FF00FF00FF80FF00
+        FF00FF00FF000000FF00000080000000FF000080800000808000000000BFFFFF
+        FF000000000000000000FFFFFFBFFFFFFF0000000080FF00FF00FF00FF80FF00
+        FF00FF00FF000000FF00000080000000FF000080800000808000000000000000
+        0000FF00FF80FF00FF00000000BFFFFFFF0000000080FF00FF00FF00FF80FF00
+        FF00FF00FF000000FF00000080000000FF0000808080FF00FF000000003F7F7F
+        7F00FF00FF80FF00FF00000000BFFFFFFF0000000080FF00FF00FF00FF80FF00
+        FF000000FF000000FF000000FF000000FF000000FF80FF00FF00FF00FF80FF00
+        FF007F7F7F0000000000FFFFFF00000000007F7F7F80FF00FF00FF00FF000000
+        00000000800000008000000080000000800000008080FF00FF00FF00FF80FF00
+        FF0000000000000000000000003F7F7F7F00FF00FF80FF00FF00000000000080
+        8000008080000080800000000080FF00FF00FF00FF80FF00FF00FF00FF80FF00
+        FF00FF00FF80FF00FF00FF00FF80FF00FF00FF00FF0000000000008080000080
+        800000808080FF00FF0000000080FF00FF00FF00FF80FF00FF00FF00FF80FF00
+        FF000000000000000000FF00FF80FF00FF000000000000808000008080000080
+        8000FF00FF80FF00FF0000000080FF00FF00FF00FF80FF00FF00FF00FF000000
+        0000FF00FF0000000000FF00FF0000000000008080000080800000808080FF00
+        FF00FF00FF80FF00FF0000000080FF00FF00FF00FF80FF00FF0000000080FF00
+        FF00000000000000000000000000008080000080800000808000FF00FF80FF00
+        FF00FF00FF80FF00FF0000000080FF00FF00FF00FF80FF00FF00000000000000
+        00000000000000000000000000000000000000808080FF00FF00FF00FF80FF00
+        FF00FF00FF3F7F7F7F000000003F7F7F7F00FF00FF80FF00FF00FF00FF80FF00
+        FF000000000000000000000000000000000000000080FF00FF00FF00FF80FF00
+        FF00FF00FF3F7F7F7F000000003F7F7F7F00FF00FF80FF00FF00FF00FF80FF00
+        FF00008080000000000000000000000000000000003F7F7F7F00FF00FF80FF00
+        FF00FF00FF3F7F7F7F000000003F7F7F7F00FF00FF80FF00FF00FF00FF80FF00
+        FF000080800000808000FF00FF00000000000000000000000000000000000000
+        0000FF00FF80FF00FF00FF00FF80FF00FF00FF00FF80FF00FF00}
+      Caption = 'Настройки'
+      ShortCut = 16464
+      OnClick = N3Click
+    end
+    object N2: TMenuItem
+      Caption = '-'
+    end
+    object N1: TMenuItem
+      Caption = 'Закрыть'
+      OnClick = N1Click
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 280
+    Top = 8
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = Timer2Timer
+    Left = 312
+    Top = 8
+  end
+  object abcBusy1: TabcBusy
+    AutoSize = False
+    AVISource.CommonAVI = aviFindFile
+    Caption = 'Поиск файлов'
+    DlgWidth = 300
+    DlgHeight = 60
+    Options = [abdShowAVI, abdShowCaption, abdShowMessage1]
+    WordWrap = False
+    Left = 344
+    Top = 8
+  end
+end
